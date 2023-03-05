@@ -63,15 +63,16 @@ def did_query_load(driver):
 class GifScraper():
 
     def __init__(self,browser="firefox"):
-        self.browser=browser
-        self.sources = []
-        match self.browser.lower():
-            case "firefox":
-                self.options = Options()
-                set_profile_preferences(self.options)
-                self.driver = webdriver.Firefox(options=self.options)
-            case other:
-                print("bruh, u a straight dumbass")
+        if __name__ == "__main__":
+            self.browser=browser
+            self.sources = []
+            match self.browser.lower():
+                case "firefox":
+                    self.options = Options()
+                    set_profile_preferences(self.options)
+                    self.driver = webdriver.Firefox(options=self.options)
+                case other:
+                    print("bruh, u a straight dumbass")
 
     def quit(self):
         self.driver.quit()
