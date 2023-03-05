@@ -75,7 +75,6 @@ class GifScraper():
 
     def quit(self):
         self.driver.quit()
-        print("DRIVER QUIT")
 
     def download(self,directory):
         print("downloading...")
@@ -92,5 +91,5 @@ class GifScraper():
         self.driver.get(f"https://www.gifcities.org/?q={query}")
         WebDriverWait(self.driver,timeout=30,poll_frequency=1).until(did_query_load)
         gifs = self.driver.find_elements(By.CSS_SELECTOR,gif_query_selector)[len(ignored_img_sources):]
-        self.quit()
         self.sources = list([re.sub("(?<=[0-9])[/](?=http)","if_/",gif.get_attribute("src")) for gif in gifs])[:amount]
+        self.quit()
