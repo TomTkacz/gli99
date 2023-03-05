@@ -12,7 +12,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name=pip_name,
-    version='0.0.5',
+    version='0.0.7',
     description=description,
     py_modules=modules,
     package_dir={'': 'src'},

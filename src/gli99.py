@@ -63,16 +63,15 @@ def did_query_load(driver):
 class GifScraper():
 
     def __init__(self,browser="firefox"):
-        if __name__ == "__main__":
-            self.browser=browser
-            self.sources = []
-            match self.browser.lower():
-                case "firefox":
-                    self.options = Options()
-                    set_profile_preferences(self.options)
-                    self.driver = webdriver.Firefox(options=self.options)
-                case other:
-                    print("bruh, u a straight dumbass")
+        self.browser=browser
+        self.sources = []
+        match self.browser.lower():
+            case "firefox":
+                self.options = Options()
+                set_profile_preferences(self.options)
+                self.driver = webdriver.Firefox(options=self.options)
+            case other:
+                print("browser not supported")
 
     def quit(self):
         self.driver.quit()
@@ -88,7 +87,6 @@ class GifScraper():
         print("all gifs downloaded")
 
     def load(self,query,amount=10):
-        start_time = time.time()
         self.driver.get(f"https://www.gifcities.org/?q={query}")
         WebDriverWait(self.driver,timeout=30,poll_frequency=1).until(did_query_load)
         gifs = self.driver.find_elements(By.CSS_SELECTOR,gif_query_selector)[len(ignored_img_sources):]
