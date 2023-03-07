@@ -1,0 +1,41 @@
+{
+    "firefox": {
+        "arguments": [
+            "-headless"
+        ],
+        "preferences": {
+            "network.http.pipelining": "True",
+            "network.http.proxy.pipelining": "True",
+            "network.http.pipelining.maxrequests": 8,
+            "content.notify.interval": 500000,
+            "content.notify.ontimer": "True",
+            "content.switch.threshold": 250000,
+            "browser.cache.memory.capacity": 65536,
+            "browser.startup.homepage": "about:blank",
+            "reader.parse-on-load.enabled": "False",
+            "browser.pocket.enabled": "False",
+            "loop.enabled": "False",
+            "browser.chrome.toolbar_style": 1,
+            "browser.display.show_image_placeholders": "False",
+            "browser.display.use_document_colors": "False",
+            "browser.display.use_document_fonts": 0,
+            "browser.display.use_system_colors": "True",
+            "browser.formfill.enable": "False",
+            "browser.helperApps.deleteTempFileOnExit": "True",
+            "browser.shell.checkDefaultBrowser": "False",
+            "browser.startup.page": 0,
+            "browser.tabs.forceHide": "True",
+            "browser.urlbar.autoFill": "False",
+            "browser.urlbar.autocomplete.enabled": "False",
+            "browser.urlbar.showPopup": "False",
+            "browser.urlbar.showSearch": "False",
+            "extensions.checkCompatibility": "False",
+            "extensions.checkUpdateSecurity": "False",
+            "extensions.update.autoUpdateEnabled": "False",
+            "extensions.update.enabled": "False",
+            "general.startup.browser": "False",
+            "plugin.default_plugin_disabled": "False",
+            "permissions.default.image": 2
+        }
+    }
+}

@@ -1,5 +1,7 @@
 # this project
 update_pypi.bat
+genzip.bat
+example_app.py
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
