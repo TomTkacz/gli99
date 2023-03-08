@@ -1,4 +1,4 @@
-![1678256341153](image/README/1678256341153.png)
+![1678306298287](image/README/1678306298287.png)
 
 ![1678242811979](image/README/1678242811979.png)![1678242820753](image/README/1678242820753.png)
 
@@ -17,3 +17,9 @@ gs = GifScraper(browser="firefox")
 gs.load(query="brazil",amount=5)
 gs.download("D:/GifsFolder/")
 ```
+
+currently supported browsers:
+
+* Edge
+* Chrome
+* Firefox

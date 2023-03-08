@@ -1,11 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
+import requests
 import json
 import os
 import re
-import requests
 
 gif_query_selector = "div a img"
 ignored_img_sources = [
@@ -27,32 +26,53 @@ def did_query_load(driver):
 
 class GifScraper():
 
-    def __init__(self,browser="firefox"):
+    def __init__(self,browser="edge"):
         self.browser=browser
         self.sources = []
-        self.options = Options()
+        self.options = None
         abspath = os.path.abspath(__file__)
         dname = os.path.dirname(abspath)
         os.chdir(dname)
         options_json = json.load(open('browser_options.json','r'))
         
-        if self.browser.lower() in options_json:
-            [self.options.add_argument(arg) for arg in options_json[self.browser.lower()]["arguments"]]
-            [self.options.set_preference(pref[0],pref[1]) for pref in options_json[self.browser.lower()]["preferences"]]
-            
         print(f"attempting to create {browser} driver ",end="... ")
+        
+        def set_browser_options():
+            if self.browser.lower() in options_json:
+                [self.options.add_argument(arg) for arg in options_json[self.browser.lower()]["arguments"]]
+                [self.options.set_preference(pref[0],pref[1]) for pref in options_json[self.browser.lower()]["preferences"]]
+            
         match self.browser.lower():
             case "firefox":
-                self.driver = webdriver.Firefox(options=self.options)
+                from selenium.webdriver.firefox.service import Service as FirefoxService
+                from webdriver_manager.firefox import GeckoDriverManager
+                from selenium.webdriver.firefox.options import Options as FirefoxOptions
+                self.options = FirefoxOptions()
+                set_browser_options()
+                self.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()),options=self.options)
             case "chrome":
-                self.driver = webdriver.Chrome(options=self.options)
+                from selenium.webdriver.chrome.service import Service as ChromeService
+                from webdriver_manager.chrome import ChromeDriverManager
+                from selenium.webdriver.chrome.options import Options as ChromeOptions
+                self.options = ChromeOptions()
+                set_browser_options()
+                self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+            case "edge":
+                from selenium.webdriver.edge.service import Service as EdgeService
+                from webdriver_manager.microsoft import EdgeChromiumDriverManager
+                from selenium.webdriver.edge.options import Options as EdgeOptions
+                self.options = EdgeOptions()
+                set_browser_options()
+                self.driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
             case other:
                 print("browser not supported")
                 return
         print("success!")
 
     def quit(self):
-        self.driver.quit()
+        if not (self.driver.session_id is None):
+            self.driver.quit()
+            self.driver.session_id = None
 
     def download(self,directory):
         directory = directory.replace("\\","/")
@@ -67,7 +87,7 @@ class GifScraper():
         print("all gifs downloaded")
 
     def load(self,query,amount=10):
-        print(f"retrieving {query} gifs ",end="... ")
+        print(f"retrieving \"{query}\" gifs ",end="... ")
         self.driver.get(f"https://www.gifcities.org/?q={query}")
         WebDriverWait(self.driver,timeout=30,poll_frequency=1).until(did_query_load)
         gifs = self.driver.find_elements(By.CSS_SELECTOR,gif_query_selector)[len(ignored_img_sources):]

@@ -22,6 +22,7 @@ setuptools.setup(
     install_requires=[
         'selenium',
         'requests',
+        'webdriver-manager',
     ],
     url=f"https://github.com/TomTkacz/gli99",
     author="Tom Tkacz",
