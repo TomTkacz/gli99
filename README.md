@@ -1,6 +1,4 @@
-# gli99 (GIF Like It's '99)
-
-Web scraper for gifcities.org
+![1678240674995](image/README/1678240674995.png)
 
 ## Installation
 
