@@ -37,5 +37,19 @@
             "plugin.default_plugin_disabled": "False",
             "permissions.default.image": 2
         }
+    },
+    "chrome":{
+        "arguments": [
+            "--disable-extensions",
+            "--disable-gpu",
+            "--headless"
+        ],
+        "preferences": {}
+    },
+    "edge":{
+        "arguments": [
+            "--headless"
+        ],
+        "preferences": {}
     }
 }

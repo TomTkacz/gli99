@@ -1,6 +1,6 @@
 ![1678306298287](image/README/1678306298287.png)
 
-![1678242811979](image/README/1678242811979.png)![1678242820753](image/README/1678242820753.png)
+![Installation](image/README/1678242811979.png)![1678242820753](image/README/1678242820753.png)
 
 Run the following to install:
 
@@ -8,7 +8,7 @@ Run the following to install:
 pip install gli99
 ```
 
-![1678242837994](image/README/1678242837994.png)![1678255311221](image/README/1678255311221.png)
+![Usage](image/README/1678242837994.png)![1678255311221](image/README/1678255311221.png)
 
 ```python
 from gli99.tools import GifScraper

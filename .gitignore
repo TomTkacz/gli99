@@ -2,6 +2,8 @@
 update_pypi.bat
 genzip.bat
 example_app.py
+pypi_readme.py
+restore_readme.py
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

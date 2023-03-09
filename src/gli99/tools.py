@@ -56,14 +56,14 @@ class GifScraper():
                 from selenium.webdriver.chrome.options import Options as ChromeOptions
                 self.options = ChromeOptions()
                 set_browser_options()
-                self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+                self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=self.options)
             case "edge":
                 from selenium.webdriver.edge.service import Service as EdgeService
                 from webdriver_manager.microsoft import EdgeChromiumDriverManager
                 from selenium.webdriver.edge.options import Options as EdgeOptions
                 self.options = EdgeOptions()
                 set_browser_options()
-                self.driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
+                self.driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()),options=self.options)
             case other:
                 print("browser not supported")
                 return
