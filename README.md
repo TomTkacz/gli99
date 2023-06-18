@@ -1,6 +1,6 @@
 ![1678306298287](image/README/1678306298287.png)
 
-***Do NOT use this repo for professional use, this was a personal project to practice version control, web scraping, and readme design. The correct way to access GifCities.org is through its (admittedly slow) [API](https://gifcities.archive.org/api/v1/gifsearch?q=hamster).***
+***Do NOT use this repo for professional use. This was a personal project to practice version control, web scraping, and readme design. The correct way to access GifCities.org is through its (admittedly slow) [API](https://gifcities.archive.org/api/v1/gifsearch?q=hamster).***
 
 ---
 
