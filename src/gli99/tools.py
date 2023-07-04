@@ -30,7 +30,7 @@ class GifScraper():
         self.sources = []
         self.options = None
         
-	abspath = os.path.abspath(__file__)
+        abspath = os.path.abspath(__file__)
         root = os.path.dirname(abspath)
         options_path = os.path.normpath(root + "/browser_options.json")
 
