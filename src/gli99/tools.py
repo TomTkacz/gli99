@@ -33,11 +33,8 @@ class GifScraper():
         abspath = os.path.abspath(__file__)
         root = os.path.dirname(abspath)
         options_path = os.path.normpath(root + "/browser_options.json")
-
-        options_json = json.load(open('browser_options.json','r'))
-        
-        print(f"attempting to create {browser} driver ",end="... ")
-        
+        options_json = json.load(open(options_path,'r'))
+                
         def set_browser_options():
             if self.browser.lower() in options_json:
                 [self.options.add_argument(arg) for arg in options_json[self.browser.lower()]["arguments"]]

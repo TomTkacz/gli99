@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="gli99",
-    version='1.1.7',
+    version='1.1.8',
     description="Web scraper for gifcities.org",
     package_dir={'':'src'},
     packages=setuptools.find_packages(where="src"),
