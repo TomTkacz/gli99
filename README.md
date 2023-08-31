@@ -1,6 +1,6 @@
 ![1678306298287](image/README/1678306298287.png)
 
-***Do NOT use this repo for professional use. This was a personal project to practice version control, web scraping, and readme design. The correct way to access GifCities.org is through its (admittedly slow) [API](https://gifcities.archive.org/api/v1/gifsearch?q=hamster).***
+**This was created as an alternative to the official [GifCities API](https://gifcities.archive.org/api/v1/gifsearch?q=hamster) and was mostly just a personal practice project for Selenium WebDriver. The GifCities server is simply slow to serve image data, so either way will yield about the same result. But hey, it's Python :D**
 
 ---
 
