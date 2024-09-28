@@ -31,3 +31,4 @@ currently supported browsers:
 * Firefox
 
 ![1678475501350](image/README/1678475501350.png)
+
