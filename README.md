@@ -40,6 +40,6 @@ currently supported browsers:
 * Firefox
 
 <div align="center">
-    <img src="https://i.imgur.com/GCJ3VNQ.gif">
+    <img src="https://i.imgur.com/GCJ3VNQ.gif" width="75%">
 </div>
 
