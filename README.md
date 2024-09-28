@@ -7,7 +7,7 @@
 ---
 
 <div>
-    <img src="https://i.imgur.com/ys9tSyW.gif"><img src="https://i.imgur.com/jJbTPjg.gif">
+    <img src="https://i.imgur.com/ys9tSyW.gif" height="60px"><img src="https://i.imgur.com/jJbTPjg.gif">
 </div>
 
 Run the following to install:
@@ -17,7 +17,7 @@ pip install gli99
 ```
 
 <div>
-    <img src="https://i.imgur.com/Bdtlrz0.gif"><img src="https://i.imgur.com/wjqbAoA.gif">
+    <img src="https://i.imgur.com/Bdtlrz0.gif" height="60px"><img src="https://i.imgur.com/wjqbAoA.gif">
 </div>
 
 ```python
