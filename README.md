@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://ibb.co/6FH43b8">
+    <img src="https://i.ibb.co/Tt4HVR1/1678306298287.gif">
 </div>
 
 **gli99 (GIF Like Its '99) was created as an alternative to the official [GifCities API](https://gifcities.archive.org/api/v1/gifsearch?q=hamster) and was mostly just a personal practice project for Selenium WebDriver. The GifCities server is simply slow to serve image data, so either way will yield about the same result. But hey, it's Python :D**
@@ -8,7 +8,7 @@
 
 
 <div>
-    <img src="https://imgur.com/ys9tSyW"><img src="https://imgur.com/jJbTPjg">
+    <img src="https://i.imgur.com/ys9tSyW.gif"><img src="https://i.imgur.com/jJbTPjg.gif">
 </div>
 
 Run the following to install:
@@ -18,7 +18,7 @@ pip install gli99
 ```
 
 <div>
-    <img src="https://imgur.com/Bdtlrz0"><img src="https://imgur.com/wjqbAoA">
+    <img src="https://i.imgur.com/Bdtlrz0.gif"><img src="https://i.imgur.com/wjqbAoA.gif">
 </div>
 
 ```python
@@ -36,5 +36,5 @@ currently supported browsers:
 * Firefox
 
 <div align="center">
-    <img src="https://imgur.com/GCJ3VNQ">
+    <img src="https://i.imgur.com/GCJ3VNQ.gif">
 </div>
