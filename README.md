@@ -38,4 +38,3 @@ currently supported browsers:
 <div align="center">
     <img src="https://i.imgur.com/GCJ3VNQ.gif">
 </div>
-
